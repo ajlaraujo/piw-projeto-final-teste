@@ -12,7 +12,8 @@ router.get('/', (req, res) => {
                 <h1>ARENA é um website de aluguel de quadras esportivas</h1>
                 <p>Autores: Ana Beatriz Machado, Carolaine Lima, Ana Julia Araujo, Gabriel Andrade</p>
             </body>
-        </html>`;
+        </html>
+        `;
     res.send(htmlResponse);
 });
 
