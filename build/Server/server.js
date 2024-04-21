@@ -9,7 +9,7 @@ const routes_1 = require("./routes");
 function startServer() {
     const app = (0, express_1.default)();
     const PORT = 3333;
-    // Middleware para processar corpor de requisição JSON
+    // Middleware para processar corpo de requisição JSON
     app.use(express_1.default.json());
     // Rotas da API
     app.use(routes_1.router);

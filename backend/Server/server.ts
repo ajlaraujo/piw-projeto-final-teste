@@ -5,7 +5,7 @@ export function startServer() {
     const app = express();
     const PORT = 3333;
 
-    // Middleware para processar corpor de requisição JSON
+    // Middleware para processar corpo de requisição JSON
     app.use(express.json());
 
     // Rotas da API
