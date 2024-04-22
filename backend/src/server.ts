@@ -1,15 +1,16 @@
 import express from 'express';
-import { router } from './routes';
+import bodyParser from 'body-parser';
+import usersRouter from './routes/users';
 
 export function startServer() {
     const app = express();
-    const PORT = 3333;
+    const PORT = 5555;
 
     // Middleware para processar corpo de requisição JSON
-    app.use(express.json());
+    app.use(bodyParser.json());
 
-    // Rotas da API
-    app.use(router);
+    // Rotas da API usuário
+    app.use(usersRouter);
 
     // Iniciar o servidor 
     app.listen(PORT, () => {

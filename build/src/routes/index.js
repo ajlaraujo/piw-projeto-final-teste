@@ -1,8 +1,10 @@
-import { Router } from 'express';
-
-const router = Router();
-
-router.get('/', (req, res) => {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.app = void 0;
+const express_1 = require("express");
+const app = (0, express_1.Router)();
+exports.app = app;
+app.get('/', (req, res) => {
     const htmlResponse = `
         <html>
             <body>
@@ -13,5 +15,3 @@ router.get('/', (req, res) => {
         `;
     res.send(htmlResponse);
 });
-
-export { router };

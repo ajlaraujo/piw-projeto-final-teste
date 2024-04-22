@@ -5,14 +5,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.startServer = void 0;
 const express_1 = __importDefault(require("express"));
-const routes_1 = require("./routes");
+const body_parser_1 = __importDefault(require("body-parser"));
+const users_1 = __importDefault(require("./routes/users"));
 function startServer() {
     const app = (0, express_1.default)();
-    const PORT = 3333;
+    const PORT = 5555;
     // Middleware para processar corpo de requisição JSON
-    app.use(express_1.default.json());
-    // Rotas da API
-    app.use(routes_1.router);
+    app.use(body_parser_1.default.json());
+    // Rotas da API usuário
+    app.use(users_1.default);
     // Iniciar o servidor 
     app.listen(PORT, () => {
         console.log(`Server is running on port ${PORT}`);
